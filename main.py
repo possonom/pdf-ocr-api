@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="OCR API",
     description="OCR and PDF processing service",
-    version="1.0.0"
+    version="0.0.1"
 )
 
 
