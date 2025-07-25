@@ -28,10 +28,11 @@ async def pdf_to_images(
     format: str = "PNG"
 ):
     """Convert PDF to images"""
+    # Check file type first, before any processing
+    if not file.filename.lower().endswith(".pdf"):
+        raise HTTPException(status_code=400, detail="File must be a PDF")
+    
     try:
-        if not file.filename.lower().endswith(".pdf"):
-            raise HTTPException(status_code=400, detail="File must be a PDF")
-        
         # Import here to avoid issues if not installed
         import pdf2image
         
