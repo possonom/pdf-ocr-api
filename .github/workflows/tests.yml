@@ -34,7 +34,8 @@ jobs:
         else
           pip install fastapi uvicorn python-multipart
         fi
-        pip install pytest httpx
+        # Install compatible test dependencies
+        pip install pytest==7.4.3 httpx==0.24.1
     
     - name: Test dependency installation
       run: |
