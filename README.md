@@ -371,12 +371,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/possonom/ocr-api/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/possonom/ocr-api/discussions)
-- 📧 **Email**: support@your-domain.com
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/possonom/ocr-api/discussions) 
 
 ## Changelog
 
-### v1.0.0
+### v0.0.1
 - Initial release
 - PDF to images conversion
 - OCR text extraction
