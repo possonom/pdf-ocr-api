@@ -1,4 +1,4 @@
-# OCR API Service
+# PDF OCR API
 
 A FastAPI-based microservice for OCR (Optical Character Recognition) and PDF processing, designed to work seamlessly with n8n workflows and other automation tools.
 
@@ -11,6 +11,7 @@ A FastAPI-based microservice for OCR (Optical Character Recognition) and PDF pro
 - Dependency checking
 - Comprehensive test suite
 - CI/CD pipeline with GitHub Actions
+- Docker containerization
 
 ## Features
 
@@ -20,15 +21,26 @@ A FastAPI-based microservice for OCR (Optical Character Recognition) and PDF pro
 - 🌐 **RESTful API**: Easy integration with any application
 - 🧪 **Comprehensive Testing**: Full test coverage with automated CI/CD
 - 📊 **Health Checks**: Built-in monitoring and dependency checking
+- 🐳 **Docker Ready**: Containerized for easy deployment
 
 ## Quick Start
+
+### Using Docker (Recommended)
+
+```bash
+# Run the latest version
+docker run -p 8000:8000 ghcr.io/possonom/pdf-ocr-api:latest
+
+# Or run a specific version
+docker run -p 8000:8000 ghcr.io/possonom/pdf-ocr-api:v0.0.1
+```
 
 ### Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/possonom/ocr-api.git
-cd ocr-api
+git clone https://github.com/possonom/pdf-ocr-api.git
+cd pdf-ocr-api
 
 # Install dependencies
 pip install -r requirements.txt
@@ -175,6 +187,19 @@ if (ocrResult.success) {
 
 ## Development
 
+### Building Docker Image
+
+```bash
+# Build the image
+docker build -t ghcr.io/possonom/pdf-ocr-api:v0.0.1 .
+
+# Test locally
+docker run --rm -p 8000:8000 ghcr.io/possonom/pdf-ocr-api:v0.0.1
+
+# Push to registry
+docker push ghcr.io/possonom/pdf-ocr-api:v0.0.1
+```
+
 ### Running Tests
 
 ```bash
@@ -258,14 +283,18 @@ Common language codes:
 ### Development Workflow
 
 ```bash
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/pdf-ocr-api.git
+cd pdf-ocr-api
+
 # Install in development mode
-pip install -e .
+pip install -r requirements.txt
 
 # Run with auto-reload
 uvicorn main:app --reload
 
-# Run tests on file changes
-pytest-watch test_main.py
+# Run tests on changes
+pytest test_main.py -v
 ```
 
 ## Troubleshooting
@@ -326,8 +355,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/possonom/ocr-api/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/possonom/ocr-api/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/possonom/pdf-ocr-api/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/possonom/pdf-ocr-api/discussions)
+- 📋 **Project**: [GitHub Repository](https://github.com/possonom/pdf-ocr-api)
 
 ## Changelog
 
